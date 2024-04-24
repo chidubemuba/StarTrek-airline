@@ -1,0 +1,65 @@
+{% block body %}
+    <div class="card-container">
+        <div class="card">
+            <div class="welcome-container">
+                <h1>Welcome, {{ request.user.first_name }}</h1>
+                <div class="user-details-container">
+                    <h2>User Details</h2>
+                    <p>Username: {{ user.username }}</p>
+                    <p>Email: {{ user.email }}</p>
+                    <p>First Name: {{ user.first_name }}</p>
+                    <p>Last Name: {{ user.last_name }}</p>
+                    <button class="view-flights-button"><a href="{% url 'flights_index' %}">View Flights</a></button>
+                    <button class="view-flights-button"><a href="{% url 'logout' %}">Logout</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        .welcome-container {
+            text-align: center;
+        }
+
+        .user-details-container {
+            margin-top: 20px;
+        }
+
+        .view-flights-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-flights-button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .view-flights-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}

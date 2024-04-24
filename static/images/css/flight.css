@@ -1,0 +1,17 @@
+/* Add this CSS to your existing stylesheet or create a new one */
+.flight-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.flight-info h4 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.flight-info p {
+    font-size: 18px;
+    color: #555;
+}
